@@ -7,9 +7,6 @@ const catInfoDiv = document.querySelector('.cat-info');
 const errorText = document.querySelector('.error');
 const loaderEl = document.querySelector('.loader');
 
-errorText.style.display = 'none';
-loaderEl.style.display = 'block';
-
 fetchBreeds().then(breeds => {
   breeds.forEach(breed => {
     loaderEl.style.display = 'none';
@@ -17,6 +14,7 @@ fetchBreeds().then(breeds => {
     option.value = breed.id;
     option.text = breed.name;
     breedSelect.add(option);
+    breedSelect.style.display = 'block';
   });
 }).catch(() => {
   showError();
@@ -37,11 +35,13 @@ breedSelect.addEventListener('change', () => {
       <p>Temperament: ${cat.breeds[0].temperament}</p>
       </div>
       `;
+      Notiflix.Notify.success('We found a cat for you!');
       loaderEl.style.display = 'none';
       catInfoDiv.style.display = 'flex';
       breedSelect.style.display = 'block';
   }).catch(() => {
     showError();
+    breedSelect.style.display = 'block';
   })
 });
 

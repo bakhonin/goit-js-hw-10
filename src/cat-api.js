@@ -10,12 +10,12 @@ function fetchBreeds() {
   return axios
     .get(`${BASE_URL}breeds`)
     .then(response => response.data)
-    .catch(error => console.error(text.error));
+    .catch(error => console.error(response.statusText));
 };
 
 function fetchCatByBreed(breedId) {
   return axios.get(`${BASE_URL}images/search?breed_ids=${breedId}`)
     .then(response => response.data)
-    .catch(error => console.error(text.error));
+    .catch(error => console.error(response.statusText));
 };
 

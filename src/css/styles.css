@@ -4,6 +4,7 @@ body {
 }
 
 .breed-select {
+  display: none;
   width: 250px; 
   padding: 10px;
   border-radius: 5px;
@@ -35,6 +36,7 @@ body {
 }
 
 .loader {
+  display: block;
   margin: auto;
   margin-top: 100px;
   background-color: #3e3434;
@@ -63,6 +65,10 @@ body {
     50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
     75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
     100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
+
+.error {
+  display: none;
 }
 
   
