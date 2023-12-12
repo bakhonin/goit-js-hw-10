@@ -4,13 +4,12 @@ body {
 }
 
 .breed-select {
-  display: none;
-  width: 250px; 
+  display: block;
+  width: 200px; 
   padding: 10px;
   border-radius: 5px;
-  font-size: 16px;
-  color: #0a0a0a;
-  background-color: #c0c0c0;
+  font-size: 14px;
+  overflow: hidden; 
 }
 
 .cat-info {
@@ -70,6 +69,16 @@ body {
 .error {
   display: none;
 }
+
+.ss-content .ss-list {
+  max-height: 300px; 
+  overflow-y: auto; 
+}
+
+.breed-select.ss-main {
+  width: 200px; 
+}
+
 
   
 
